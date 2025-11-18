@@ -1,10 +1,12 @@
+ 
+ 
  const express = require('express');
  const app =express();
  app.use(express.json())
 
 
 app.get ('/' ,(req ,res )=>{
-    res.send('This is home page')
+    res.status(200).send('This is home page')
 })
 
 // ----------------------Login Part---------------
@@ -13,11 +15,11 @@ app.get ('/login' ,(req ,res )=>{
 
     const {Email , Password}=req.body;
    
-    if(!Email) return res.send('Email is required')
-    if(!Password) return res.send('Password is required')
+    if(!Email) return res.status(400).send('Email is required')
+    if(!Password) return res.status(400).send('Password is required')
         
 
-    res.send('This is login page ')
+    res.status(200).send('Login sucessfull')
 
 })
 
@@ -30,13 +32,13 @@ app.get('/register' ,(req ,res)=>{
 
     console.log(req.body);
 
-    if(!Name) return res.send('Name is required')
-    if(!Email) return res.send('Email is required')
-    if(!Password) return res.send('Password is required')
-    if(Password != ConfirmPassword) return res.send('Passwords do not match')
-    if(!ConfirmPassword) return res.send('Confirm Password is required')
-
-    res.send('register Sucessfull')
+    if(!Name) return res.status(400).send('Name is required')
+    if(!Email) return res.status(400).send('Email is required')
+    if(!Password) return res.status(400).send('Password is required')
+        if(!ConfirmPassword) return res.status(400).send('Confirm Password is required')
+            if(Password != ConfirmPassword) return res.status(400).send('Passwords do not match')
+                
+    res.status(201).send('register Sucessfull')
 
 })
 
