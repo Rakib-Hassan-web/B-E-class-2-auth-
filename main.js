@@ -1,2 +1,12 @@
-console.log('ok 1')
-console.log('ok 2')
+ const express = require('express');
+
+ const app =express();
+
+
+
+
+
+ app.listen(4000,()=>{
+
+    console.log('surver running on port 4000 ')
+ })
