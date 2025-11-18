@@ -1,2 +1,2 @@
-console.log('hellow this is ok')
-console.log(' this is ok2')
+console.log('ok 1')
+console.log('ok 2')
