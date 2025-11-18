@@ -13,17 +13,9 @@ app.get ('/login' ,(req ,res )=>{
 
     const {Email , Password}=req.body;
    
-    if(!Email) {res.send('Email is required')
-
-
-
-        if(!Password) return res.send('Password is required')
-
-
-            else  { res.send('Login Successfull')}
-    }
-
-
+    if(!Email) return res.send('Email is required')
+    if(!Password) return res.send('Password is required')
+        
 
     res.send('This is login page ')
 
