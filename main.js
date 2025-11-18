@@ -13,9 +13,31 @@ app.get ('/' ,(req ,res )=>{
 
 app.get ('/login' ,(req ,res )=>{
 
-    console.log(req.body)
-    res.send('Login successfull 22')
+    const {Email , Password}=req.body;
+
+    console.log(Email)
+    console.log(Password)
+
+
+    if(!Email) return res.send('Email is required')
+    if(!Password) return res.send('Password is required')
+
+
+
+
+
+    res.send('Login successfull ')
+
 })
+
+
+
+app.post('/register')
+
+
+
+
+
 
 
 
