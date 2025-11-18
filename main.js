@@ -32,7 +32,9 @@ app.get ('/login' ,(req ,res )=>{
 
 
 
-app.post('/register')
+app.post('/register' ,(req ,res)=>{
+    
+})
 
 
 
