@@ -3,9 +3,12 @@
  const app =express();
 
 
-app.get ('/' ,(req ,res )=>{
-    res.send('hello world for mr')
+
+
+app.get ('/login' ,(req ,res )=>{
+    res.send('Login successfull 22')
 })
+
 
 
  app.listen(4000,()=>{
