@@ -36,7 +36,13 @@ app.post('/register' ,(req ,res)=>{
 
 
 
-    const { Name ,Email,Password,ConfirmPassword} =req.body
+    // const { Name ,Email,Password,ConfirmPassword} =req.body
+
+    console.log(req.body);
+    
+
+
+    res.send('register Sucessfull')
 
 })
 
