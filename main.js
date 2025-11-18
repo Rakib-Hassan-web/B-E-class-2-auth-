@@ -33,7 +33,11 @@ app.get ('/login' ,(req ,res )=>{
 
 
 app.post('/register' ,(req ,res)=>{
-    
+
+
+
+    const { Name ,Email,Password,ConfirmPassword} =req.body
+
 })
 
 
