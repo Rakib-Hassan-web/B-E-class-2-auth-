@@ -3,7 +3,9 @@
  const app =express();
 
 
-
+app.get ('/' ,(req ,res )=>{
+    res.send('hello world for mr')
+})
 
 
  app.listen(4000,()=>{
