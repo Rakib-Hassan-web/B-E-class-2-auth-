@@ -36,10 +36,20 @@ app.post('/register' ,(req ,res)=>{
 
 
 
-    // const { Name ,Email,Password,ConfirmPassword} =req.body
+    const { Name ,Email,Password,ConfirmPassword} =req.body
 
     console.log(req.body);
     
+
+    if(!Name) return res.send('Name is required')
+    if(!Email) return res.send('Email is required')
+    if(!Password) return res.send('Password is required')
+    if(Password != ConfirmPassword) return res.send('Passwords do not match')
+    
+    if(!ConfirmPassword) return res.send('Confirm Password is required')
+
+
+
 
 
     res.send('register Sucessfull')
